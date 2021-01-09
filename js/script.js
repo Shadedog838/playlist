@@ -25,7 +25,7 @@ function loadSongs() {
     });
 
     links.forEach(function(link, index) {
-        $('#links').append('<img song=' + index + ' src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c4fa.png">');
+        $('#links').append('<img song=' + index + ' src="play.png">');
     });
 
 }
@@ -44,7 +44,7 @@ $("img").on("click", function() {
 var attr=$(this).attr("song");
 console.log($(this));
 $('.song').html('<iframe src=' + ' " ' + links[attr] + ' " ' + 'frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
-    
+
 });
 */
 
