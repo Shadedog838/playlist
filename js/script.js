@@ -25,7 +25,7 @@ function loadSongs() {
     });
 
     links.forEach(function(link, index) {
-        $('#links').append('<img song=' + index + ' src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c4f9.png">');
+        $('#links').append('<img class="img" song=' + index + ' src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c4f9.png">');
     });
 
 }
@@ -33,20 +33,13 @@ loadSongs();
 
 
 
-$("img").on("click", function() {
-    console.log("hello")
+$("#links").on("click", ".img", function() {
+    console.log(links)
     var attr = $(this).attr("song");
     console.log($(this));
     $('.song').html('<iframe src=' + ' " ' + links[attr] + ' " ' + 'frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
 });
 
-/*$('img').click(function(){
-var attr=$(this).attr("song");
-console.log($(this));
-$('.song').html('<iframe src=' + ' " ' + links[attr] + ' " ' + 'frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
-
-});
-*/
 
 function emptySongInfo() {
     $("#songs").empty();
